@@ -9,4 +9,9 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('/good')
+  getGoodMorning() : Record<string, unknown> {
+    return this.appService.getGoodMorning()
+  }
 }

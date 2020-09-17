@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { Message } from './message';
 
 @Injectable()
 export class AppService {
@@ -6,7 +7,7 @@ export class AppService {
     return 'Hello World!';
   }
 
-  getGoodMorning(): { message: string } {
+  getGoodMorning(): Message {
     return { message: 'Good Morning' };
   }
 }

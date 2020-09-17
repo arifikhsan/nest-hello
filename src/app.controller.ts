@@ -1,5 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Message } from './message';
 
 @Controller()
 export class AppController {
@@ -11,7 +12,7 @@ export class AppController {
   }
 
   @Get('/good')
-  getGoodMorning() : Record<string, unknown> {
-    return this.appService.getGoodMorning()
+  getGoodMorning(): Message {
+    return this.appService.getGoodMorning();
   }
 }
